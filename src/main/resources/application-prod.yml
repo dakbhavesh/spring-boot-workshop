@@ -14,3 +14,19 @@ spring:
     console:
       enabled: false
       path: /h2-console
+#  boot:
+#    admin:
+#      url: http://localhost:9001
+#      client:
+#        management-url: http://localhost:8585
+#        health-url: http://localhost:8585/health
+#        service-url: http://localhost:8585
+
+#endpoints:
+#  health:
+#    sensitive: false
+#  metrics:
+#    enabled: true
+
+#metrics:
+#    jmx.enabled: true
