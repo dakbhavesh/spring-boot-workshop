@@ -22,7 +22,7 @@ Spring Boot auto configures majority portion of your application based on conten
 
 **For example:** If spring-boot finds Apache DBCP jar in classpath it will enable connection pooling with defaults (). 
  
-Exaustive set of configuration properties can be found [Here] (http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#common-application-properties)
+Exaustive set of configuration properties can be found [Here] (http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#common-application-properties)
 
 ## Integration testing with MockMVC
 ## Non-functional production services
