@@ -2,11 +2,15 @@ info:
   version: @pom.version@
 logging:
   file: logs/spring-boot-workshop.log
-spring:
-  application:
-    name: @pom.artifactId@
-  jackson:
-    serialization:
-      indent-output: true
+
 server:
     port: 8585
+
+endpoints:
+   health:
+     sensitive: false
+   metrics:
+     enabled: true
+
+metrics:
+     jmx.enabled: true

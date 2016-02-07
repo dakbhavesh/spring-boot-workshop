@@ -61,3 +61,9 @@ Spring Boot application can be easily started as Unix/Linux services. Below are 
 	ls -l /etc/init.d/sbapp
 
 	
+# Production configuration
+
+*   enable spring boot admin client by adding related dependency via maven.
+    
+        mvn clean install
+        java  -jar target/spring-boot-workshop-0.0.1-SNAPSHOT.jar 
