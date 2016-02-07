@@ -24,25 +24,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ComponentScan(basePackages = {"com.meetup"})
 public class UserResourceIntegrationTests {
 
-    private MockMvc mockUserResourceMvc;
+    private MockMvc api;
 
     @Autowired
     private UserResource userResource;
 
     @Before
     public void setUp(){
-        mockUserResourceMvc = MockMvcBuilders.standaloneSetup(userResource).build();
+        api = MockMvcBuilders.standaloneSetup(userResource).build();
     }
 
     @Test
-    @Ignore
+    @Ignore("Run from IDE to showcase")
     public void testSaveUser() throws Exception{
         String userJson = "{\n" +
                 "\"firstName\": \"Foo\",\n" +
                 "\"lastName\": \"Bar\",\n" +
                 "\"username\": \"foo.bar\"\n" +
                 "}";
-        mockUserResourceMvc.perform(MockMvcRequestBuilders.post("/users").
+        api.perform(MockMvcRequestBuilders.post("/users").
                 contentType(MediaType.APPLICATION_JSON).
                 content(userJson).
                 accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).

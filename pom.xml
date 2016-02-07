@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>spring-boot-workshop</name>
-	<description>Spring Boot Workshop</description>
+	<description>Web Application with Database tested with Integration Tests</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
