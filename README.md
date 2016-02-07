@@ -11,7 +11,7 @@
 
 Generate spring project through spring hosted web based quick starter service: [Spring Initializr] (http://start.spring.io/) 
 
-## Application in less than 140 characters
+## Tweet size web application
 
 ## Auto Configuration & Sensible Defaults
 
