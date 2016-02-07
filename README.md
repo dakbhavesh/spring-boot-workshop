@@ -11,6 +11,10 @@
 
 Generate spring project through spring hosted web based quick starter service: [Spring Initializr] (http://start.spring.io/) 
 
-## Tweet size application
-
 ## Application with database
+Using database 
+
+Using different database per environment
+
+Using embedded database [console] (http://localhost:8585/h2-console) to verify data
+

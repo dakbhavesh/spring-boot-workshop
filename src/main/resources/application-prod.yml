@@ -1,18 +1,11 @@
 spring:
   profiles:
-    active: dev
+    active: prod
   datasource:
-      url: jdbc:h2:mem:prod-db;
+      url: jdbc:h2:mem:prod-db
       driverClassName: org.h2.Driver
       username: produser
       password: prodpass
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     show-sql: false
-  h2:
-    console:
-      enabled: false
-      path: /h2-console
-  jackson:
-    serialization:
-      write_dates_as_timestamps: false

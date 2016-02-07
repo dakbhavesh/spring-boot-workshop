@@ -1,13 +1,5 @@
 info:
   version: @pom.version@
-logging:
-  file: logs/spring-boot-workshop.log
-
-spring:
-  jackson:
-    serialization:
-      indent-output: true
 
 server:
     port: 8585
-    context-path:
