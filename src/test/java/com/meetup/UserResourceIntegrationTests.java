@@ -35,7 +35,7 @@ public class UserResourceIntegrationTests {
     }
 
     @Test
-    @Ignore("Run from IDE to showcase")
+    @Ignore("Run Test from IDE")
     public void testSaveUser() throws Exception{
         String userJson = "{\n" +
                 "\"firstName\": \"Foo\",\n" +
@@ -48,4 +48,13 @@ public class UserResourceIntegrationTests {
                 accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).
                 andExpect(content().contentType(MediaType.APPLICATION_JSON));
     }
+
+    @Test
+    @Ignore("Run Test from IDE")
+    public void testFindOne() throws Exception{
+        api.perform(MockMvcRequestBuilders.get("/users/31").
+                contentType(MediaType.APPLICATION_JSON).
+                accept(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
+    }
+
 }
