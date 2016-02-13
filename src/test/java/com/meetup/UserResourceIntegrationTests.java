@@ -16,6 +16,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -35,7 +36,7 @@ public class UserResourceIntegrationTests {
     }
 
     @Test
-    @Ignore("Run Test from IDE")
+    @Ignore("Run MockMvc tests from IDE")
     public void testSaveUser() throws Exception{
         String userJson = "{\n" +
                 "\"firstName\": \"Foo\",\n" +
@@ -50,11 +51,13 @@ public class UserResourceIntegrationTests {
     }
 
     @Test
-    @Ignore("Run Test from IDE")
+    @Ignore("Run MockMvc tests from IDE")
     public void testFindOne() throws Exception{
-        api.perform(MockMvcRequestBuilders.get("/users/31").
-                contentType(MediaType.APPLICATION_JSON).
-                accept(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
+        api.perform(MockMvcRequestBuilders.get("/users/1").
+                accept(MediaType.APPLICATION_JSON)).
+                andExpect(status().isOk()).
+                andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("firstName").exists());
     }
 
 }
