@@ -4,3 +4,6 @@ spring:
 
 logging:
   file: logs/spring-boot-workshop-dev-profile.log
+
+server:
+    port: 8585
