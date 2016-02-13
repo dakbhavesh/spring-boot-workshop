@@ -18,3 +18,6 @@ Using different database per environment
 
 Using embedded database [console] (http://localhost:8585/h2-console) to verify data
 
+*To run application with different specific spring profile*
+
+    java -jar target/spring-boot-workshop-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
