@@ -23,6 +23,8 @@ endpoints:
     sensitive: false
   metrics:
     enabled: true
+  shutdown:
+    enabled: true
 
 server:
     port: 8585
