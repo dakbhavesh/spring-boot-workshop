@@ -23,7 +23,7 @@
 		<java.version>1.8</java.version>
 		<spring.boot.version>1.3.2.RELEASE</spring.boot.version>
 		<codecentric.admin.version>1.3.2</codecentric.admin.version>
-		<jackson.version>2.9.9.2</jackson.version>
+		<jackson.version>2.12.1</jackson.version>
 	</properties>
 
 	<dependencies>
